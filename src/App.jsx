@@ -47,7 +47,7 @@ export default function App() {
         className="app shadow-xl h-5/6 rounded-3xl bg-slate-800 grid grid-cols-1 overflow-hidden"
         style={{
           width: "400px",
-          gridTemplateRows: "1.5fr 1fr 400px",
+          gridTemplateRows: "1fr 1fr 400px",
         }}
       >
         <h1 className="text-3xl font-light text-center text-slate-200 flex justify-center items-center">
