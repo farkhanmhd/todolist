@@ -65,7 +65,11 @@ export default function App() {
         <p className="text-white text-center text-xs">
           {" "}
           by{" "}
-          <a href="https://instagram.com/farkhanmhd" className="text-blue-200">
+          <a
+            href="https://instagram.com/farkhanmhd"
+            className="text-blue-200"
+            target="_blank"
+          >
             farkhanmhd
           </a>
         </p>
@@ -75,7 +79,7 @@ export default function App() {
             <h2 className="text-slate-200 text-center font-bold text-2xl my-2.5 sm:my-5">
               To do Lists
             </h2>
-            <div className="todos-container w-full h-[33vh] md:h-[50vh] lg:h-[35vh] overflow-auto">
+            <div className="todos-container w-full sm:h-[30vh] md:h-[50vh] lg:h-[35vh] overflow-auto">
               <ul className="text-slate-200 flex flex-col items-center w-full h-full">
                 {toDoList.map((todo) => (
                   <li

@@ -10,12 +10,13 @@
   animation: fadeOut 0.4s forwards;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 340px) {
   .todos-container {
+    height: 30vh;
     max-height: 270px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 340px) {
   .todos-container {
     height: 50vh;
   }
