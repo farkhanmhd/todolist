@@ -42,30 +42,36 @@ export default function App() {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-slate-400">
+    <div className="w-screen h-screen flex justify-center bg-slate-800 overflow-hidden pb-5 ">
       <div
-        className="app shadow-xl h-5/6 rounded-3xl bg-slate-800 grid grid-cols-1 overflow-hidden"
+        className="app overflow-hidden w-3/6 h-full flex flex-col items-center gap-y-2 sm:gap-y-10"
         style={{
-          width: "400px",
-          gridTemplateRows: "1fr 1fr 400px",
+          minWidth: "300px",
         }}
       >
-        <h1 className="text-3xl font-light text-center text-slate-200 flex justify-center items-center">
+        <h1 className="text-3xl font-serif font-light text-center text-slate-200 mt-7 md:mt-32 md:text-5xl">
           To Do List App
         </h1>
+        <p className="text-white text-center text-xs">
+          {" "}
+          by{" "}
+          <a href="https://instagram.com/farkhanmhd" className="text-blue-200">
+            farkhanmhd
+          </a>
+        </p>
         <AddNoteForm onSubmit={handleSubmit} />
-        <div className="todos-box h-full">
+        <div className="todos-box w-full h-full">
           {toDoList.length > 0 ? (
             <>
-              <h2 className="text-slate-200 text-center font-bold my-2 text-2xl">
+              <h2 className="text-slate-200 text-center font-bold text-2xl my-3 sm:my-5">
                 To do Lists
               </h2>
-              <div className="todos-container overflow-auto h-5/6">
-                <ul className="text-slate-200 flex flex-col items-center">
+              <div className="todos-container w-full h-3/6 sm:2/6 lg:h-2/6">
+                <ul className="text-slate-200 flex flex-col items-center w-full h-full overflow-auto">
                   {toDoList.map((todo) => (
                     <li
                       key={todo.id}
-                      className="border-b border-white border-solid w-5/6 py-5 last-of-type:border-none relative"
+                      className="border-b border-white border-solid w-5/6 py-5 last-of-type:border-none relative first-of-type:pt-3"
                     >
                       <input
                         id={todo.id}
@@ -103,9 +109,11 @@ export default function App() {
               </div>
             </>
           ) : (
-            <h2 className="w-full h-full grid place-content-center text-slate-200 text-3xl -mt-14">
-              No to do list
-            </h2>
+            <div className="grid place-content-center w-full h-full">
+              <h2 className=" text-slate-200 text-2xl -mt-14">
+                You didn't have any Task
+              </h2>
+            </div>
           )}
         </div>
       </div>
