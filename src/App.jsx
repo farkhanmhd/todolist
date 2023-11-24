@@ -45,7 +45,7 @@ export default function App() {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center bg-slate-800 overflow-hidden pb-5 ">
+    <div className="w-screen h-screen flex justify-center bg-slate-100 dark:bg-slate-800 overflow-hidden pb-5 ">
       <div
         className={`app overflow-hidden w-5/6 h-full flex flex-col ${
           toDoList.length ? "justify-start" : "justify-center"
@@ -56,18 +56,18 @@ export default function App() {
         }}
       >
         <h1
-          className={`text-3xl font-serif font-light text-center text-slate-200 ${
+          className={`text-3xl font-serif font-light text-center text-slate-900 ${
             toDoList.length > 0 ? "mt-7 md:mt-32" : ""
           } md:text-5xl`}
         >
           To Do List App
         </h1>
-        <p className="text-white text-center text-xs">
+        <p className="text-slate-900 text-center text-xs">
           {" "}
           by{" "}
           <a
             href="https://instagram.com/farkhanmhd"
-            className="text-blue-200"
+            className="text-slate-900"
             target="_blank"
           >
             farkhanmhd
@@ -75,17 +75,17 @@ export default function App() {
         </p>
         <AddNoteForm onSubmit={handleSubmit} />
         {toDoList.length > 0 && (
-          <div className="todos-box w-full h-full">
-            <h2 className="text-slate-200 text-center font-bold text-2xl my-2.5 sm:my-5">
+          <div className="todos-box w-full h-full text-slate-900 ">
+            <h2 className="text-center font-bold text-2xl my-2.5 sm:my-5 ">
               To do Lists
             </h2>
             <div className="todos-container w-full sm:h-[30vh] md:h-[50vh] lg:h-[35vh] overflow-auto">
-              <ul className="text-slate-200 flex flex-col items-center w-full h-full">
+              <ul className=" flex flex-col items-center w-full h-full">
                 {toDoList.map((todo) => (
                   <li
                     key={todo.id}
                     id={todo.id}
-                    className="fade-in border-b border-white border-solid w-5/6 py-5 last-of-type:border-none relative"
+                    className="fade-in border-b border-slate-900 border-solid w-5/6 py-5 last-of-type:border-none relative"
                   >
                     <input
                       id={todo.id}
