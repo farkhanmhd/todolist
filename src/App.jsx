@@ -62,7 +62,7 @@ export default function App() {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center bg-slate-300 dark:bg-slate-800 overflow-hidden pb-5 ">
+    <div className="w-screen h-screen max-w-[100vw] max-h-screen flex justify-center bg-slate-300 dark:bg-slate-800 pb-5 ">
       <nav className="fixed top-40 md:top-0 md:right-0 md:left-0 dark:text-white">
         <ul className="flex flex-col gap-y-1 md:flex-row md:justify-end md:items-center md:gap-4 md:pr-10 ">
           <li className="md:py-3 w-[30px] flex justify-center items-center">
@@ -96,10 +96,7 @@ export default function App() {
             </a>
           </li>
           <li className=" md:py-3 w-[30px] flex justify-center items-center">
-            <a
-              href="https://github.com/farkhanmhd/todolist.com"
-              target="_blank"
-            >
+            <a href="https://github.com/farkhanmhd/todolist" target="_blank">
               <svg
                 width="28"
                 height="28"
@@ -164,13 +161,13 @@ export default function App() {
             <h2 className="text-center font-bold text-2xl my-2.5 sm:my-5 ">
               To do Lists
             </h2>
-            <div className="todos-container w-full h-fit sm:max-h-[30vh] md:max-h-[50vh] lg:max-h-[35vh] overflow-auto rounded-2xl">
+            <div className="todos-container w-full h-fit sm:max-h-[30vh] md:h-[50vh] overflow-auto rounded-2xl">
               <ul className=" flex flex-col items-center w-full gap-y-3 py-3">
                 {toDoList.map((todo) => (
                   <li
                     key={todo.id}
                     id={`item-${todo.id}`}
-                    className="fade-in w-full py-5 last-of-type:border-none relative px-5 flex items-center gap-5 bg-white dark:bg-slate-950 shadow-md rounded-2xl origin-top"
+                    className="fade-in w-full py-5 last-of-type:border-none relative px-5 flex items-center gap-5 bg-white dark:bg-slate-950 shadow-md rounded-2xl origin-top~"
                   >
                     <input
                       id={todo.id}
